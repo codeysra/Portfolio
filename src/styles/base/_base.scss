@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%; // Now: 100% is 10px and 1rem = 10px
+}
+
+body{
+    font-family: Helvetica,  Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+h1,h2,h3,p{
+    margin:0;
+}
+
+.active{
+    font-weight: bold;
+    color: brown;
+}
