@@ -18,7 +18,14 @@ module.exports = {
                 'css-loader',
                 'sass-loader'
             ]
-        }]
+        },{
+            test: /\.(png|jpeg|jpg)$/,
+            use: [
+             { loader: 'url-loader', options: { limit: 8192 } } ,
+             { loader: 'file-loader', options: { limit: 8192 } }
+            ]
+          }
+        ]
     },
     devtool: 'cheap-module-eval-source-map',
     devServer:{
