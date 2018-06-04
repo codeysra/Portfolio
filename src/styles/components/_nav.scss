@@ -7,7 +7,7 @@
     font-weight: 700;
 }
 .navbar-brand span{
-    color: $secondary;
+    color: darken($secondary,15%);
 }
 
 .navbar-toggler{
@@ -27,7 +27,7 @@
 
 .active{
     color: #000 !important;
-    border-bottom: 2px solid #000 !important;
+    font-weight: 700  !important;
  }
  .non-active{
     color:#555 !important;
@@ -56,11 +56,14 @@
     /* Adding a BORDER BOTTOM to the items in the nav*/
    .navbar .navbar-nav .nav-item a:hover,
     .navbar .navbar-nav .nav-item a:active{
-        border-bottom: 2px solid #000;
+        font-weight: 700;
     }
 }
 
 /* ON WINDOW SCROLL */
-.dark-navbar{background-color: darken(#fff,1%) !important;}
+.dark-navbar{
+    background-color: darken(#fff,1%) !important;
+    border-bottom: 1px solid darken($secondary,15%) !important;
+}
 .dark-brand{color: #000 !important;}
- .dark-nav-item{color: #000;}
+.dark-nav-item{color: #000;}

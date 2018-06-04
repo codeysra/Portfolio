@@ -1,0 +1,32 @@
+#java-skill{width: 90%;}
+#spring-hibernate-skill{width: 75%;}
+#react-js{width:70%;}
+#html-css{width:80%}
+
+.skill{
+    margin-top: 2rem;
+}
+#skills .card{
+    margin: $m-size auto;
+    text-align: left;
+    padding: $m-size;
+    font-weight: 400;
+}
+
+#skills h2{
+    margin-bottom: $s-size;
+}
+
+#skills h3{
+    margin:$xs-size 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.progress{
+    height: 2rem;
+    border-radius: 0.5rem !important;
+}
+.progress-bar{
+    padding: $xs-size !important;
+    font-size: 1.5rem;
+}
