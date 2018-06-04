@@ -5,47 +5,55 @@ import Scrollchor from 'react-scrollchor';
 
 class Nav  extends Component{
   componentDidMount() {
+    // window.addEventListener("click",this.handleClick);
      window.addEventListener("scroll", this.handleScroll);
-   }
+     //window.addEventListener("click", this.handleClick);
+  }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
+  handleClick=event =>{
+   
+       
+  };
 
   handleScroll = event => {
-   
-    if (window.scrollY>20 || document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       document.querySelector(".navbar").classList.add("dark-navbar");
-       document.querySelector(".navbar-brand").classList.add("dark-brand");
+     // Modifying the nav style onscroll: transparent => white 
+      if (window.scrollY>20 || document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector(".navbar").classList.add("dark-navbar");
+        document.querySelector(".navbar-brand").classList.add("dark-brand");
 
-    } else {
-      document.querySelector(".navbar").classList.remove("dark-navbar");
-      document.querySelector(".navbar-brand").classList.remove("dark-brand");
-    }
+      } else {
+        document.querySelector(".navbar").classList.remove("dark-navbar");
+        document.querySelector(".navbar-brand").classList.remove("dark-brand");
+      }
+    // End of  -- Modifying the nav style onscroll: transparent => white
 
  
-    // Updating Nav Current Active Item Link
-    const scrollYPos = (window.scrollY?window.scrollY:document.documentElement.scrollTop);
-    const navY = document.querySelector("nav").clientHeight;
-    const navItems = document.getElementById("nav-items").getElementsByTagName('a');
-    
-    for(let i=0;i<navItems.length;i++){
-      const currentItem = navItems[i];
-      const hashPos = currentItem.href.indexOf("#");
-      const refItem = document.querySelector((currentItem.href).substring(hashPos));
-      const refItemPos =  refItem.getBoundingClientRect();
-      if(refItemPos.top<=0 && refItemPos.top-navY <= scrollYPos && 
-        refItemPos.height - navY >= -refItemPos.top
-      ){
-        window.scrollY>20?currentItem.classList.add("active"):currentItem.classList.remove("active");
-        currentItem.classList.remove("non-active");
-      }else{
-        currentItem.classList.remove("active");
-        const refCurrentItem =  document.querySelector((currentItem.href).substring(hashPos)+"-nav-item");
-        window.scrollY>20 ? refCurrentItem .classList.add("non-active"):refCurrentItem .classList.remove("non-active");
+    /* Updating the nav's current active item link */
+      const scrollYPos = (window.scrollY?window.scrollY:document.documentElement.scrollTop);
+      const navY = document.querySelector("nav").clientHeight;
+      const navItems = document.getElementById("nav-items").getElementsByTagName('a');
+      for(let i=0; i< navItems.length; i++){
+        const currentItem = navItems[i];
+        
+        const hashPos = currentItem.href.indexOf("#");
+        const refItem = document.querySelector((currentItem.href).substring(hashPos));
+        const refItemPos =  refItem.getBoundingClientRect();
+        if(refItemPos.top<=0 && refItemPos.top-navY <= scrollYPos && 
+          refItemPos.height - navY >= -refItemPos.top
+        ){
+          currentItem.classList.remove("non-active");
+          window.scrollY>20?currentItem.classList.add("active"):currentItem.classList.remove("active");
+          const dis = (currentItem.href).substring(hashPos)+"-section";
+         window.location.hash=dis;
+        }else{
+          currentItem.classList.remove("active");
+          window.scrollY>20 ? currentItem.classList.add("non-active"):currentItem.classList.remove("non-active");
+          
+        }
       }
-       
-     
-    }
+    /* END of -- Updating the nav's current active item link */
   };
 
   
@@ -66,15 +74,18 @@ class Nav  extends Component{
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto" id="nav-items">
             <li className="nav-item">
-              <Scrollchor to="#header" 
-               className="nav-item-link" id="header-nav-item">
+              <Scrollchor to="#header" id="header-nav-item" className="nav-item-link">
                   Home
               </Scrollchor>
             </li>
             <li className="nav-item">
-              <Scrollchor to="#about"  
-               className="nav-item-link" id="about-nav-item">
+              <Scrollchor to="#about"  id="about-nav-item" className="nav-item-link">
                   About
+              </Scrollchor>
+            </li>
+            <li className="nav-item">
+              <Scrollchor to="#skills" id="skills-nav-item" className="nav-item-link">
+                  Skills
               </Scrollchor>
             </li>
           </ul>
@@ -93,18 +104,4 @@ class Nav  extends Component{
  
 
 export default Nav;
-/*
-<li class="nav-item" 
-            onClick={()=>(
-              document.getElementById('home').scrollIntoView(true)
-            )} >
-              <Scrollchor to="#home" className={location.hash == "#home" ? "active" : ""}>
-                  Home
-              </Scrollchor>
-            </li>
-            <li class="nav-item">
-              <Scrollchor to="#about"  className={location.hash == "#about" ? "active" : ""}>
-                  About
-              </Scrollchor>
-            </li>
-            */
+ 

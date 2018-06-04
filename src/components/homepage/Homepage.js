@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import About from "./About";
+import Skills from "./Skills";
 
 class Homepage extends React.Component {
   componentDidMount() {
@@ -14,6 +15,7 @@ class Homepage extends React.Component {
       <div>
         <Header />
         <About />
+        <Skills/>
       </div>
     );
   }
