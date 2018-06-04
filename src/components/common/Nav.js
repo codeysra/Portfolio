@@ -74,18 +74,28 @@ class Nav  extends Component{
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto" id="nav-items">
             <li className="nav-item">
-              <Scrollchor to="#header" id="header-nav-item" className="nav-item-link">
+              <Scrollchor to="#header"  >
                   Home
               </Scrollchor>
             </li>
             <li className="nav-item">
-              <Scrollchor to="#about"  id="about-nav-item" className="nav-item-link">
+              <Scrollchor to="#about"  >
                   About
               </Scrollchor>
             </li>
             <li className="nav-item">
-              <Scrollchor to="#skills" id="skills-nav-item" className="nav-item-link">
+              <Scrollchor to="#skills"  >
                   Skills
+              </Scrollchor>
+            </li>
+            <li className="nav-item">
+              <Scrollchor to="#projects">
+                  Projects
+              </Scrollchor>
+            </li>
+            <li className="nav-item">
+              <Scrollchor to="#contact">
+                  Contact 
               </Scrollchor>
             </li>
           </ul>

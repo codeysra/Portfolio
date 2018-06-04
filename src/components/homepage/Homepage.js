@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import About from "./About";
 import Skills from "./Skills";
+import Projects from './Projects';
+import Contact from './Contact';
 
 class Homepage extends React.Component {
   componentDidMount() {
@@ -16,6 +18,8 @@ class Homepage extends React.Component {
         <Header />
         <About />
         <Skills/>
+        <Projects/>
+        <Contact/>
       </div>
     );
   }
