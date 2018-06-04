@@ -1,1 +1,66 @@
+.navbar{
+    background-color: transparent !important;
+}
+.navbar-brand{
+    font-size: $l-size !important;
+    color: #fff !important;
+    font-weight: 700;
+}
+.navbar-brand span{
+    color: $secondary;
+}
+
+.navbar-toggler{
+    font-size:2.3rem;
+}
+.navbar-light .navbar-toggler{
+    border: none !important;
+}
  
+.navbar .navbar-nav .nav-item a:link,
+.navbar .navbar-nav .nav-item a:visited{
+    color: darken(#fff,7%);
+    margin: 0 $s-size;
+    font-weight: 400;
+    transition: border 0.2s;
+}
+
+.active{
+    color: darken($secondary,10%) !important;
+    font-weight: 700 !important;
+}
+.non-active{
+    color:#000 !important;
+    
+}
+/* Customizing the nav bar on Small screens */
+@media (max-width: 767px) {
+    /* Making the Navbar WHITE and Brand name BLACK */
+    .navbar{
+        background-color: darken(#fff,1%) !important;
+    }
+    .navbar-brand{
+        color: #000 !important;
+    }
+    .navbar-brand span{
+        color: darken($secondary,10%);
+    }
+    .navbar .navbar-nav .nav-item a:link,
+    .navbar .navbar-nav .nav-item a:visited{
+        color: #000;
+    }
+}
+
+/* Customizing the nav bar on Medium screens */
+@media (min-width: 768px) {
+    /* Adding a BORDER BOTTOM to the items in the nav*/
+   .navbar .navbar-nav .nav-item a:hover,
+    .navbar .navbar-nav .nav-item a:active{
+        border-bottom: 1px solid $secondary;
+    }
+}
+
+/* ON WINDOW SCROLL */
+.dark-navbar{background-color: darken(#fff,1%) !important;}
+.dark-brand{color: #000 !important;}
+ .dark-nav-item{color: #000;}

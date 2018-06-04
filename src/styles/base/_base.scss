@@ -1,3 +1,4 @@
+/* BAISC SETUP */
 *{
     margin:0;
     padding:0;
@@ -20,9 +21,8 @@ h1,h2,h3,p{
     margin: 0;
 }
 
-
-
-.active{
-    font-weight: bold;
-    color: brown;
+a:link,a:hover,a:visited,a:active{
+    font-size: $m-size;
+    text-decoration: none;
 }
+ 

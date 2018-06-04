@@ -1,6 +1,6 @@
 header{
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+    linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.7)),
     url("https://cdn-images-1.medium.com/max/1600/1*zVDcaM6mqhi9m0LP_Sq4Ag.jpeg");
     background-size: cover;
     background-attachment: scroll;
@@ -9,12 +9,13 @@ header{
     height: 100vh;
 }
 
+/* TEXTBOX inside of Header */
 .header__textbox{
     position: absolute;
     width: 100%;
     top: 50%;
     left:50%;
-    transform: translate(-50%);
+    transform: translate(-50%,-50%);
     text-align: center;
 }
 
@@ -22,10 +23,56 @@ header{
 .header__textbox h2{
     color:#fff;
     font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-bottom: $s-size;
 } 
 .header__textbox h1{
-    font-size: 200%;
+    font-size: 250%;
+    text-transform: uppercase;
 }
 .header__textbox h2{
-    font-size: 150%;
+    font-size: 200%;
+    margin-bottom: $l-size;
 }
+.header__textbox span{
+    font-weight: 700;
+}
+
+/* BUTTONS iside of Textbox*/
+.header__textbox .btn:link,
+.header__textbox .btn:visited { // Should be inline-block, but it is like this by default with Bootstrap
+    padding: $xs-size $l-size;
+    border-radius: 200px;
+    font-size: 1.8rem;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    margin: $m-size  0;
+}
+.header__textbox .btn--full:link,
+.header__textbox .btn--full:visited {
+    background-color: darken(#fff,5%);
+    border: 2px solid darken(#fff,5%);
+    color: #000;
+    margin-right: $m-size;
+     
+}  
+
+.header__textbox .btn--transparent:link,
+.header__textbox .btn--transparent:visited {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid darken(#fff,5%)
+} 
+
+.header__textbox .btn--full:hover,
+.header__textbox .btn--full:active {
+    background-color: darken($secondary,15%);
+    border: 2px solid darken($secondary,15%);
+    color: #fff;
+}
+
+.header__textbox .btn--transparent:hover,
+.header__textbox .btn--transparent:active {
+    color: darken($secondary,15%);
+    border: 2px solid darken($secondary,15%);
+}  
