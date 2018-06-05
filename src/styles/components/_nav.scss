@@ -26,28 +26,28 @@
 }
 
 .active{
-    color: #000 !important;
+    color: #fff !important;
     font-weight: 700  !important;
  }
  .non-active{
-    color:#555 !important;
+    color:#888 !important;
     
 }
 /* Customizing the nav bar on Small screens */
 @media (max-width: 767px) {
     /* Making the Navbar WHITE and Brand name BLACK */
     .navbar{
-        background-color: darken(#fff,1%) !important;
+        background-color: darken(#000,1%) !important;
     }
     .navbar-brand{
-        color: #000 !important;
+        color: #fff !important;
     }
     .navbar-brand span{
         color: darken($secondary,10%);
     }
     .navbar .navbar-nav .nav-item a:link,
     .navbar .navbar-nav .nav-item a:visited{
-        color: #000;
+        color: #fff;
     }
 }
 
@@ -62,8 +62,8 @@
 
 /* ON WINDOW SCROLL */
 .dark-navbar{
-    background-color: darken(#fff,1%) !important;
+    background-color: darken(#000,1%) !important;
     border-bottom: 1px solid darken($secondary,15%) !important;
 }
-.dark-brand{color: #000 !important;}
-.dark-nav-item{color: #000;}
+.dark-brand{color: #fff !important;}
+.dark-nav-item{color: #fff;}

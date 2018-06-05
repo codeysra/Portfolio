@@ -40,13 +40,19 @@ class Nav  extends Component{
         const hashPos = currentItem.href.indexOf("#");
         const refItem = document.querySelector((currentItem.href).substring(hashPos));
         const refItemPos =  refItem.getBoundingClientRect();
-        if(refItemPos.top<=0 && refItemPos.top-navY <= scrollYPos && 
-          refItemPos.height - navY >= -refItemPos.top
+        console.log( (currentItem.href).substring(hashPos) );
+        console.log(refItemPos);
+        console.log(scrollYPos);
+        console.log(navY);
+
+        const top = refItemPos.top - navY;
+        const bottom =  refItemPos.height - navY + refItemPos.top;
+        if( top<=0 && bottom>0
         ){
           currentItem.classList.remove("non-active");
           window.scrollY>20?currentItem.classList.add("active"):currentItem.classList.remove("active");
-          const dis = (currentItem.href).substring(hashPos)+"-section";
-         window.location.hash=dis;
+          const currentHash = (currentItem.href).substring(hashPos)+"-section";
+          window.location.hash=currentHash;
         }else{
           currentItem.classList.remove("active");
           window.scrollY>20 ? currentItem.classList.add("non-active"):currentItem.classList.remove("non-active");
@@ -55,16 +61,17 @@ class Nav  extends Component{
       }
     /* END of -- Updating the nav's current active item link */
   };
-
+//refItemPos.top - navY <=0
   
-
+/*refItemPos.top<=0 && refItemPos.top-navY <= scrollYPos && 
+          refItemPos.height - navY >= -refItemPos.top */
   componentDidUpdate(){
     }
   render(){
     return (
        
    
-    <nav className="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div className="container">
         <Scrollchor className="navbar-brand" to="#header">ys<span>.</span></Scrollchor>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
