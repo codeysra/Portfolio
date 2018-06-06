@@ -1,0 +1,28 @@
+#projects h3{
+    margin-bottom: $m-size;
+}
+#projects p{
+   word-spacing: 0.2rem !important;
+   
+}
+#projects a:link,#projects a:visited{
+    color: #000;
+}
+#projects .fab{
+    margin-top: $m-size;
+}
+#projects .fab:hover{
+    color: darken($secondary-dark,5%);
+    
+}
+.tech-used{
+    margin: $m-size 0;
+    word-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 700;
+}
+.tech-used span{word-spacing: 0rem;}
+.tech-used .fas{
+    margin-right: $xs-size;
+}

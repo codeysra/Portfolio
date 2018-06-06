@@ -1,5 +1,5 @@
 #contact{
-    background-color: #555;
+     background-color: #444;
      color:#fff;
      padding-bottom: 0;
      height: 100vh;
@@ -7,15 +7,19 @@
 
 #contact-body{
     padding: $m-size;
+    text-align: left !important;
 }
-#contact-body h1{
-    margin: 3.5rem 0 !important;
-}
+ 
 #contact-body h3{
     margin: $m-size 0; 
+    font-size: 2rem;
 }
 
 #footer{
     background-color: #222;
     padding: $m-size;
+}
+
+#contact-body .row{
+    margin: $l-size 0;
 }

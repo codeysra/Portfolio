@@ -40,10 +40,7 @@ class Nav  extends Component{
         const hashPos = currentItem.href.indexOf("#");
         const refItem = document.querySelector((currentItem.href).substring(hashPos));
         const refItemPos =  refItem.getBoundingClientRect();
-        console.log( (currentItem.href).substring(hashPos) );
-        console.log(refItemPos);
-        console.log(scrollYPos);
-        console.log(navY);
+        
 
         const top = refItemPos.top - navY;
         const bottom =  refItemPos.height - navY + refItemPos.top;

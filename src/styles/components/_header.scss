@@ -8,7 +8,6 @@ header{
     background-position: center; 
     height: 100vh;
 }
-
 /* TEXTBOX inside of Header */
 .header__textbox{
     position: absolute;
@@ -76,3 +75,7 @@ header{
     color: darken($secondary,15%);
     border: 2px solid darken($secondary,15%);
 }  
+
+.fa-briefcase, .fa-at{
+    margin-right: $xs-size;
+}
