@@ -7,7 +7,9 @@
   "author": "YS",
   "license": "MIT",
   "scripts": {
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server --mode=development  --open chrome --hot --port 8081",
+    "build:dev": "webpack  --mode=development  ",
+    "build:prod":"webpack -p"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
