@@ -11,7 +11,7 @@ const Contact = () => (
                         <i className="fas fa-envelope fa-3x"></i>
                     </div>
                     <div className="col-10">
-                        <h3>yousaidani@gmail.com</h3>
+                        <h3>itsyousras@gmail.com</h3>
                     </div>
                 </div>
                 <div className="row">

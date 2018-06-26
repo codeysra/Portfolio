@@ -12,10 +12,10 @@ const Header = () =>{
              
            
             <a className="btn btn--full" href="#projects">
-            <i class="fa fa-briefcase"></i>
+            <i className="fa fa-briefcase"></i>
             My Projects</a>
             <a className="btn btn--transparent" href="#contact">
-            <i class="fas fa-at"></i>
+            <i className="fas fa-at"></i>
             Contact Me</a>
         </div>
         
