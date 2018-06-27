@@ -11,7 +11,7 @@
     "dev-server": "webpack-dev-server --mode=development  --open chrome --hot --port 8081",
     "build:dev": "webpack  --mode=development  ",
     "build:prod": "webpack -p --env production",
-    "start": "node server.js",
+    "start": "node ./server.js",
     
     "heroku-postbuild":"yarn run build:prod "
   },
@@ -34,13 +34,13 @@
     "react-scrollchor": "^5.0.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
-    "url-loader": "^1.0.1"
+    "url-loader": "^1.0.1",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
     "mini-css-extract-plugin": "^0.4.0",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   }
 }
