@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "My personal portfolio",
   "main": "app.js",
   "repository": "https://github.com/yousrasdn/Portfolio",
@@ -11,9 +11,9 @@
     "dev-server": "webpack-dev-server --mode=development  --open chrome --hot --port 8081",
     "build:dev": "webpack  --mode=development  ",
     "build:prod": "webpack -p --env production",
-    "start": "node ./server.js",
+    "heroku-postbuild":"yarn run build:prod ",
+    "start": "node ./server.js"
     
-    "heroku-postbuild":"yarn run build:prod "
   },
   "dependencies": {
     "babel-core": "^6.26.3",
