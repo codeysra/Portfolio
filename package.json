@@ -12,7 +12,8 @@
     "build:dev": "webpack  --mode=development  ",
     "build:prod": "webpack -p --env production",
     "start": "node server.js",
-    "heroku-postbuild":"yarn run build:prod"
+    
+    "heroku-postbuild":"export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production; yarn run build:prod; "
   },
   "dependencies": {
     "babel-core": "^6.26.3",
