@@ -1,13 +1,14 @@
 #contact{
      background-color: #444;
-     color:#fff;
+     color:#fff !important;
      padding-bottom: 0;
-     height: 100vh;
+     height: 600px;
 }
 
 #contact-body{
-    padding: $m-size;
+    // padding: $m-size;
     text-align: left !important;
+    height: 80%;
 }
  
 #contact-body h3{
@@ -18,8 +19,16 @@
 #footer{
     background-color: #222;
     padding: $m-size;
+    height: 20%;
 }
 
 #contact-body .row{
     margin: $l-size 0;
+}
+
+#contact-body a{
+  color: #fff;
+}
+#contact-body a:hover{
+    color: $secondary-dark;
 }

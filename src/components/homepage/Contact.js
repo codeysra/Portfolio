@@ -6,6 +6,7 @@ const Contact = () => (
             <h1 className="sections-h1">Contact Me</h1>
             <h2>Let's get in touch</h2>
             <div id="contact-body">
+                
                 <div className="row">
                     <div className="col-2">
                         <i className="fas fa-envelope fa-3x"></i>
@@ -23,19 +24,14 @@ const Contact = () => (
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-2">
-                    <i className="fab fa-github fa-3x"></i>
+                    <div className="col-12">
+                        <a href="https://github.com/yousrasdn"><i className="fab fa-github fa-3x"></i></a>
                     </div>
-                    <div className="col-10">
-                        <h3>@yousrasdn</h3>
-                    </div>
+                    
                 </div>
                 <div className="row">
-                    <div className="col-2">
-                    <i className="fab fa-twitter fa-3x"></i>
-                    </div>
-                    <div className="col-10">
-                        <h3>@8srayou</h3>
+                    <div className="col-12">
+                        <a href="https://www.linkedin.com/in/yousra-saidani-836341165/"><i className="fab fa-linkedin fa-3x"></i></a>
                     </div>
                 </div>
                 
